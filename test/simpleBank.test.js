@@ -62,7 +62,7 @@ contract("SimpleBank", function (accounts) {
     await instance.enroll({ from: alice });
     await instance.deposit({ from: alice, value: deposit });
     const balance = await instance.getBalance.call({ from: alice });
-
+    
     assert.equal(
       deposit.toString(),
       balance,
